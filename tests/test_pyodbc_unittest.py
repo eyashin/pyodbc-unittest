@@ -9,19 +9,14 @@ CONNECTION_STRING = 'DSN=postgres.local'
 class TestDbtest(unittest.TestCase):
     """Checks the connection to the database and getting the result."""
 
-    def setUp(self):
-        self.database = Dbtest(CONNECTION_STRING)
-
-    def tearDown(self):
-        self.database.close()
-
-    def test_version(self):
+    def test_data(self):
         """Create SQLVERSION.json."""
+        database = Dbtest(CONNECTION_STRING)
         sql = 'SELECT 1 AS ONE'
-        file_name = 'SQLVERSION'
-        self.assertEqual(self.database.from_db(sql, file_name),
-                         self.database.from_file(file_name))
-
+        file_name = 'SELECTONE'
+        self.assertEqual(database.from_db(sql, file_name),
+                         database.from_file(file_name))
+        database.close()
 
 if __name__ == '__main__':
     unittest.main()

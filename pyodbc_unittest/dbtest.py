@@ -14,7 +14,7 @@ class Dbtest:
         self.string = None
 
     def run(self, sql: str):
-		# pylint: disable=c-extension-no-member
+        # pylint: disable=c-extension-no-member
         """ Runs SQL query and return cursor """
         result = Dbresult()
         cursor = self.con.cursor()
@@ -27,7 +27,7 @@ class Dbtest:
         return result
 
     def execute(self, sql: str) -> bool:
-		# pylint: disable=c-extension-no-member
+        # pylint: disable=c-extension-no-member
         """ Runs SQL query and return status """
         cursor = self.con.cursor()
         try:
