@@ -5,3 +5,4 @@ pip uninstall pyodbc_unittest
 pip install -U -i https://test.pypi.org/simple/ pyodbc_unittest
 
 python -m twine upload  dist/*
+pip install -U pyodbc_unittest

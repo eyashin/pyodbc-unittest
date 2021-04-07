@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pyodbc-unittest",
-    version="0.8.6",
+    version="0.8.7",
     author="Evgeny Yashin",
     author_email="yashin.evgeny@gmail.com",
     description="The library provides SQL calls for the Python unittest framework",

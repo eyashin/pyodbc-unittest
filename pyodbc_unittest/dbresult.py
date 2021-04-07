@@ -1,4 +1,4 @@
-""" Part of the library provides SQL calls for the Python unittest framework """
+"""Part of the library provides SQL calls for the Python unittest framework"""
 import os
 import re
 import json
@@ -9,7 +9,7 @@ import pandas as pd
 class Dbresult:
     """ This class used for convert data from DB to Pandas DataFrame """
 
-	# pylint: disable=too-many-instance-attributes
+    # pylint: disable=too-many-instance-attributes
     def __init__(self):
         self.rowcount = 0
         self.resultcount = 0
@@ -103,7 +103,7 @@ class Dbresult:
         self.sizes = json.loads(data['sizes'])
         for item in data['datas']:
             dataframe = pd.read_json(item, orient='split',
-                              dtype='string', convert_dates=False)
+                                     dtype='string', convert_dates=False)
             self.datas.append(dataframe)
             self.data = dataframe
 

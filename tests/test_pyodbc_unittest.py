@@ -6,7 +6,7 @@ from pyodbc_unittest import Dbtest
 CONNECTION_STRING = 'DSN=postgres.local'
 
 
-class TestDbtest(unittest.TestCase):
+class TestSelect(unittest.TestCase):
     """Checks the connection to the database and getting the result."""
 
     def test_data(self):
@@ -17,6 +17,7 @@ class TestDbtest(unittest.TestCase):
         self.assertEqual(database.from_db(sql, file_name),
                          database.from_file(file_name))
         database.close()
+
 
 if __name__ == '__main__':
     unittest.main()

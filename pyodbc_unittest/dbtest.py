@@ -1,4 +1,4 @@
-""" Part of the library provides SQL calls for the Python unittest framework """
+"""Part of the library provides SQL calls for the Python unittest framework"""
 import os
 import pyodbc
 from pyodbc_unittest.dbresult import Dbresult
@@ -6,9 +6,9 @@ from pyodbc_unittest.dbresult import Dbresult
 
 class Dbtest:
     """ This class used for connect to database """
-	#pylint: disable-msg=too-many-arguments
+    # pylint: disable-msg=too-many-arguments
     def __init__(self, conection_string: str):
-		# pylint: disable=c-extension-no-member
+        # pylint: disable=c-extension-no-member
         self.con = pyodbc.connect(conection_string)
         self.con.autocommit = True
         self.string = None
