@@ -64,7 +64,7 @@ class Dbtest:
 
     def from_db(self, sql: str, file_name=None, createfile='Y', comparedata=True,
                 rowscount=True, columnnames=True, columnntypes=True, error=True):
-        """ Loads data from a ВИ and returns a string for comparison """
+        """ Loads data from a DB and returns a string for comparison """
         if sql is None:
             return None
         data = self.run(sql)
